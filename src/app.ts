@@ -9,7 +9,7 @@ app.use(morgan("dev"));
 app.use(express.json());
 
 app.get('/health', (req, res) => {
-    res.send('Hello, Expense Planner!');
+    res.send('Hello, Smart Planner!');
 });
 
 export { app };
