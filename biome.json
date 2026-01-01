@@ -6,7 +6,8 @@
 		"useIgnoreFile": false
 	},
 	"files": {
-		"ignoreUnknown": false
+		"ignoreUnknown": false,
+		"includes": ["./src/*"]
 	},
 	"formatter": {
 		"enabled": true,
@@ -28,7 +29,8 @@
 		"actions": {
 			"source": {
 				"organizeImports": "on"
-			}
+			},
+			"recommended": true
 		}
 	}
 }
