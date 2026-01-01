@@ -8,7 +8,7 @@ export const createTodoSchema = z.object({
     title: z.string().min(1),
     description: z.string().optional(),
     dueOn: z.string().optional(),
-    groupId: z.uuid().optional(),
+    groupId: z.uuid(),
     status: statusEnum.optional().default("todo"),
     priority: priorityEnum.optional().default("low"),
     notify: z.boolean().optional(),
@@ -30,6 +30,7 @@ export const exportTodosQuerySchema = z.object({
 });
 
 export const todoQuerySchema = z.object({
+    groupId: z.string().optional(),
     startDate: z.date().optional(),
     endDate: z.date().optional(),
     page: z.coerce.number().positive().default(0),

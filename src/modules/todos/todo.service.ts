@@ -19,8 +19,11 @@ export async function createTodo(userId: string, input: CreateTodo) {
 }
 
 
-export async function getTodosByDate(userId: string, query: TodoQuery) {
+export async function getTodos(userId: string, query: TodoQuery) {
     const filters = [];
+    if(query.groupId){
+        filters.push(eq(todos.groupId, query.groupId));
+    }
     if (query.status) {
         filters.push(eq(todos.status, query.status));
     }

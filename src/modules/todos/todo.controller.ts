@@ -14,7 +14,7 @@ export async function createTodoController(req: AuthRequest, res: Response) {
 
 export async function getTodosController(req: AuthRequest, res: Response) {
     res.json(
-        await todoService.getTodosByDate(req.userId!, req.query as unknown as TodoQuery)
+        await todoService.getTodos(req.userId!, req.query as unknown as TodoQuery)
     );
 }
 
